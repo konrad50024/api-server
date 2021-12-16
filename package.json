@@ -4,10 +4,10 @@
     "start": "node index",
     "start.dev": "nodemon -L"
   },
-  "dependencies": {
-    "express": "^4.16.2"
-  },
   "devDependencies": {
-    "nodemon": "^1.14.12"
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "fastify": "^3.25.0"
   }
 }

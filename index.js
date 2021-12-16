@@ -1,10 +1,18 @@
-const express = require("express");
+// Require the framework and instantiate it
+const fastify = require("fastify")({ logger: true })
 
-const { PORT = "3000" } = process.env;
-const app = express();
+// Declare a route
+fastify.get("/", async (request, reply) => {
+	return { hello: "world" }
+})
 
-app.use((req, res, next) => {
-  res.send("Hello Jill");
-});
-
-app.listen(PORT, () => console.log("We on!"));
+// Run the server!
+const start = async () => {
+	try {
+		await fastify.listen(3000, "0.0.0.0")
+	} catch (err) {
+		fastify.log.error(err)
+		process.exit(1)
+	}
+}
+start()
