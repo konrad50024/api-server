@@ -1,0 +1,13 @@
+{
+	"main": "index.js",
+	"scripts": {
+		"start": "node index",
+		"start:dev": "nodemon -L"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.15"
+	},
+	"dependencies": {
+		"fastify": "^3.25.0"
+	}
+}
