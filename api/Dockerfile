@@ -5,12 +5,12 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Install dependencies
-COPY package.json .
+COPY package*.json .
 RUN npm install
 
-# Bundle app source
+# Copying source files
 COPY . .
 
 # Exports
-EXPOSE 3000
+EXPOSE 5000
 CMD [ "npm", "run", "start:dev" ]
