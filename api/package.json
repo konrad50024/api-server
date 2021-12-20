@@ -5,9 +5,12 @@
 		"start:dev": "nodemon -L"
 	},
 	"devDependencies": {
-		"nodemon": "^2.0.15"
+		"nodemon": "^2.0.15",
+		"prisma": "^3.6.0"
 	},
 	"dependencies": {
-		"fastify": "^3.25.0"
+		"@prisma/client": "^3.6.0",
+		"fastify": "^3.25.0",
+		"fastify-cors": "^6.0.2"
 	}
 }

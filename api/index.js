@@ -1,9 +1,11 @@
 // Require the framework and instantiate it
 const fastify = require("fastify")({ logger: true })
 
+fastify.register(require("fastify-cors"), {})
+
 // Declare a route
-fastify.get("/", async (req, reply) => {
-	return { hello: "world" }
+fastify.get("/ping", async (req, reply) => {
+	reply.send({ [Date.now()]: process.env.DATABASE_URL })
 })
 
 // Run the server!
