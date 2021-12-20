@@ -26,6 +26,8 @@ services:
       - .env
     ports:
       - "5000:5000"
+    enviroment:
+      - DATABASE_URL="${DATABASE_URL}"
     command: npm run start:dev
 
   postgres:
