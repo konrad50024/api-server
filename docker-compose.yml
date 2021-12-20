@@ -13,6 +13,7 @@ services:
       - /web/usr/src/app/.next
     env_file:
       - .env
+
   rest_api:
     container_name: rest_api
     build:
@@ -26,6 +27,7 @@ services:
     ports:
       - "5000:5000"
     command: npm run start:dev
+
   postgres:
     container_name: postgres
     image: postgres:alpine
